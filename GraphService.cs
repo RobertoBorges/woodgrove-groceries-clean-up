@@ -29,7 +29,7 @@ public class GraphService
         var certificate = LoadCertificateFromStore(certificateThumbprint);
         if (certificate == null)
         {
-            _logger.LogError("Certificate not found.");
+            _logger.LogError($"Certificate not found. {certificateThumbprint}");
             return;
         }
 
